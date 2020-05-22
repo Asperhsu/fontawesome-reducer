@@ -1,0 +1,16 @@
+$icons: () !default;
+
+@import "@fortawesome/fontawesome-free/scss/_variables";
+@import "@fortawesome/fontawesome-free/scss/_mixins";
+@import "@fortawesome/fontawesome-free/scss/_core";
+@import "@fortawesome/fontawesome-free/scss/_larger";
+@import "@fortawesome/fontawesome-free/scss/_fixed-width";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "_icon_generated";
+
+
+@each $key, $value in $icons {
+    .#{$fa-css-prefix}-#{$key}:before {
+        content: fa-content($value);
+    }
+}
